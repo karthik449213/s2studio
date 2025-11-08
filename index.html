@@ -5,8 +5,9 @@
     <title>S2 Satish Studio - Hair & Beauty Unisex Salon</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-   <link rel="stylesheet" href="style.css"> 
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+   <link rel="stylesheet" href="style.css">
 </head>
 <body data-theme="dark">
     <!-- Navigation -->
@@ -31,11 +32,16 @@
 
     <!-- Hero Section -->
     <section id="home" class="hero">
+        <div class="hero-carousel">
+            <div class="hero-slide active" style="background-image: url('assets/Bridal.png');"></div>
+            <div class="hero-slide" style="background-image: url('assets/HairStyling.png');"></div>
+            <div class="hero-slide" style="background-image: url('assets/Makeup.png');"></div>
+        </div>
         <div class="hero-content fade-in">
-            <div class="hero-logo"><img src="assets/logo.jpg" alt=""></div>
-            <h1>S2 Satish Studio</h1>
-            <p class="tagline">Hair & Beauty Unisex Salon | Skin | Bridal | Nail Bar</p>
-            <a href="#services" class="btn">Explore Services</a>
+            
+            
+           
+            
         </div>
     </section>
 
@@ -109,32 +115,32 @@
             <h2 class="section-title fade-in">Our Services</h2>
             <div class="services-grid">
                 <div class="service-card fade-in">
-                    <div class="service-icon">✂️</div>
+                   <img src="assets/hair-stylist.png" alt="">
                     <h3>Hair Cut & Styling</h3>
                     <p>Professional haircuts and styling for all hair types. From classic cuts to modern trends, our expert stylists create the perfect look for you.</p>
                 </div>
                 <div class="service-card fade-in">
-                    <div class="service-icon">✨</div>
+                  <img src="assets/Skincare.png" alt="">
                     <h3>Skincare & Facial</h3>
                     <p>Rejuvenating facial treatments and advanced skincare solutions. Restore your skin's natural glow with our personalized care routines.</p>
                 </div>
                 <div class="service-card fade-in">
-                    <div class="service-icon">💄</div>
+        <img src="assets/Bridal.png" alt="">
                     <h3>Bridal Makeup</h3>
                     <p>Complete bridal makeover services for your special day. From consultation to the final touch, we ensure you look absolutely stunning.</p>
                 </div>
                 <div class="service-card fade-in">
-                    <div class="service-icon">💅</div>
+                    <img src="assets/NailArt.png" alt="">
                     <h3>Nail Art & Care</h3>
                     <p>Creative nail art designs and professional nail care. Express your personality with our unique nail art and maintain healthy nails.</p>
                 </div>
                 <div class="service-card fade-in">
-                    <div class="service-icon">🌿</div>
+                    <img src="assets/spa.png" alt="">
                     <h3>Spa & Wellness</h3>
                     <p>Relaxing spa treatments and wellness therapies. Unwind and rejuvenate with our holistic approach to beauty and wellness.</p>
                 </div>
                 <div class="service-card fade-in">
-                    <div class="service-icon">🎨</div>
+              <img src="assets/hair-colouring.png" alt="">
                     <h3>Color & Highlights</h3>
                     <p>Expert hair coloring and highlighting services. Transform your look with our premium color techniques and latest trends.</p>
                 </div>
@@ -148,7 +154,7 @@
             <h2 class="section-title fade-in">About S2 Satish Studio</h2>
             <div class="about-content">
                 <div class="about-image fade-in">
-                    <img src="assets/s2outro.jpg" alt="MK Studio" style="width:100%;height:400px;object-fit:cover;border-radius:var(--border-radius);box-shadow:var(--shadow);" />
+                    <img src="assets/interior.png" alt="MK Studio" style="width:100%;height:400px;object-fit:cover;border-radius:var(--border-radius);box-shadow:var(--shadow);" />
                 </div>
                 <div class="about-text fade-in">
                     <h2>Your Beauty Destination</h2>
@@ -169,113 +175,27 @@
             <h2 class="section-title fade-in">Our Work</h2>
             <div class="gallery-grid">
                 <div class="gallery-item fade-in" data-image="gallery1">
-                    <svg width="100%" height="100%" viewBox="0 0 300 300" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <rect width="300" height="300" fill="url(#galleryGrad1)"/>
-                        <circle cx="150" cy="120" r="60" fill="#fff" opacity="0.9"/>
-                        <path d="M100 180 Q150 200 200 180 L190 220 Q150 240 110 220 Z" fill="#E6007E" opacity="0.8"/>
-                        <text x="150" y="280" text-anchor="middle" fill="#fff" font-size="14" font-family="Poppins">Hair Styling</text>
-                        <defs>
-                            <linearGradient id="galleryGrad1" x1="0%" y1="0%" x2="100%" y2="100%">
-                                <stop offset="0%" stop-color="#1a1a1a"/>
-                                <stop offset="100%" stop-color="#333"/>
-                            </linearGradient>
-                        </defs>
-                    </svg>
+                  <img src="assets/HairStyling.png" alt="">
                     <div class="gallery-overlay"><span>Hair Styling</span></div>
                 </div>
                 <div class="gallery-item fade-in" data-image="gallery2">
-                    <svg width="100%" height="100%" viewBox="0 0 300 300" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <rect width="300" height="300" fill="url(#galleryGrad2)"/>
-                        <circle cx="150" cy="150" r="80" fill="url(#faceGrad)" opacity="0.9"/>
-                        <circle cx="130" cy="130" r="5" fill="#000"/>
-                        <circle cx="170" cy="130" r="5" fill="#000"/>
-                        <path d="M140 160 Q150 170 160 160" stroke="#000" stroke-width="2" fill="none"/>
-                        <text x="150" y="280" text-anchor="middle" fill="#fff" font-size="14" font-family="Poppins">Makeup</text>
-                        <defs>
-                            <linearGradient id="galleryGrad2" x1="0%" y1="0%" x2="100%" y2="100%">
-                                <stop offset="0%" stop-color="#2a2a2a"/>
-                                <stop offset="100%" stop-color="#444"/>
-                            </linearGradient>
-                            <linearGradient id="faceGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-                                <stop offset="0%" stop-color="#ffe0e0"/>
-                                <stop offset="100%" stop-color="#ffb0b0"/>
-                            </linearGradient>
-                        </defs>
-                    </svg>
+                   <img src="assets/Makeup.png" alt="">
                     <div class="gallery-overlay"><span>Makeup</span></div>
                 </div>
                 <div class="gallery-item fade-in" data-image="gallery3">
-                    <svg width="100%" height="100%" viewBox="0 0 300 300" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <rect width="300" height="300" fill="url(#galleryGrad3)"/>
-                        <rect x="100" y="100" width="100" height="15" rx="7" fill="#E6007E"/>
-                        <rect x="100" y="120" width="100" height="15" rx="7" fill="#fff"/>
-                        <rect x="100" y="140" width="100" height="15" rx="7" fill="#E6007E"/>
-                        <rect x="100" y="160" width="100" height="15" rx="7" fill="#fff"/>
-                        <rect x="100" y="180" width="100" height="15" rx="7" fill="#E6007E"/>
-                        <text x="150" y="280" text-anchor="middle" fill="#fff" font-size="14" font-family="Poppins">Nail Art</text>
-                        <defs>
-                            <linearGradient id="galleryGrad3" x1="0%" y1="0%" x2="100%" y2="100%">
-                                <stop offset="0%" stop-color="#1f1f1f"/>
-                                <stop offset="100%" stop-color="#3f3f3f"/>
-                            </linearGradient>
-                        </defs>
-                    </svg>
+                   <img src="assets/NailArt.png" alt="">
                     <div class="gallery-overlay"><span>Nail Art</span></div>
                 </div>
                 <div class="gallery-item fade-in" data-image="gallery4">
-                    <svg width="100%" height="100%" viewBox="0 0 300 300" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <rect width="300" height="300" fill="url(#galleryGrad4)"/>
-                        <circle cx="150" cy="150" r="100" fill="url(#skinGrad)" opacity="0.8"/>
-                        <circle cx="150" cy="150" r="60" fill="#fff" opacity="0.3"/>
-                        <circle cx="150" cy="150" r="30" fill="#E6007E" opacity="0.2"/>
-                        <text x="150" y="280" text-anchor="middle" fill="#fff" font-size="14" font-family="Poppins">Skincare</text>
-                        <defs>
-                            <linearGradient id="galleryGrad4" x1="0%" y1="0%" x2="100%" y2="100%">
-                                <stop offset="0%" stop-color="#2c2c2c"/>
-                                <stop offset="100%" stop-color="#4c4c4c"/>
-                            </linearGradient>
-                            <linearGradient id="skinGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-                                <stop offset="0%" stop-color="#ffeeee"/>
-                                <stop offset="100%" stop-color="#ffcccc"/>
-                            </linearGradient>
-                        </defs>
-                    </svg>
+                  <img src="assets/Skincare.png" alt="">
                     <div class="gallery-overlay"><span>Skincare</span></div>
                 </div>
                 <div class="gallery-item fade-in" data-image="gallery5">
-                    <svg width="100%" height="100%" viewBox="0 0 300 300" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <rect width="300" height="300" fill="url(#galleryGrad5)"/>
-                        <circle cx="150" cy="100" r="50" fill="#fff" opacity="0.9"/>
-                        <path d="M120 150 Q150 120 180 150 Q170 180 150 200 Q130 180 120 150" fill="#E6007E" opacity="0.7"/>
-                        <circle cx="150" cy="220" r="20" fill="#fff" opacity="0.8"/>
-                        <text x="150" y="280" text-anchor="middle" fill="#fff" font-size="14" font-family="Poppins">Bridal</text>
-                        <defs>
-                            <linearGradient id="galleryGrad5" x1="0%" y1="0%" x2="100%" y2="100%">
-                                <stop offset="0%" stop-color="#1e1e1e"/>
-                                <stop offset="100%" stop-color="#3e3e3e"/>
-                            </linearGradient>
-                        </defs>
-                    </svg>
+                    <img src="assets/Bridal.png" alt="">
                     <div class="gallery-overlay"><span>Bridal</span></div>
                 </div>
                 <div class="gallery-item fade-in" data-image="gallery6">
-                    <svg width="100%" height="100%" viewBox="0 0 300 300" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <rect width="300" height="300" fill="url(#galleryGrad6)"/>
-                        <circle cx="150" cy="150" r="80" fill="url(#spaGrad)" opacity="0.7"/>
-                        <path d="M100 150 Q150 100 200 150 Q150 200 100 150" fill="#fff" opacity="0.5"/>
-                        <circle cx="150" cy="150" r="20" fill="#E6007E" opacity="0.8"/>
-                        <text x="150" y="280" text-anchor="middle" fill="#fff" font-size="14" font-family="Poppins">Spa</text>
-                        <defs>
-                            <linearGradient id="galleryGrad6" x1="0%" y1="0%" x2="100%" y2="100%">
-                                <stop offset="0%" stop-color="#252525"/>
-                                <stop offset="100%" stop-color="#454545"/>
-                            </linearGradient>
-                            <linearGradient id="spaGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-                                <stop offset="0%" stop-color="#e0ffe0"/>
-                                <stop offset="100%" stop-color="#b0ffb0"/>
-                            </linearGradient>
-                        </defs>
-                    </svg>
+                    <img src="assets/spa.png" alt="">
                     <div class="gallery-overlay"><span>Spa & Wellness</span></div>
                 </div>
             </div>
@@ -286,22 +206,54 @@
     <section id="best-results" class="best-results section">
         <div class="container">
             <h2 class="section-title fade-in">Get Best Results</h2>
-            <div class="best-carousel" id="best-carousel">
-                <div class="best-slide active">
-                    <img src="assets/s21.jpg" alt="Best Haircut 1">
-                    <p>Trendy Layered Cut for Modern Style</p>
+            <div class="best-carousels">
+                <div class="best-carousel" id="best-carousel-1">
+                    <div class="best-slide active">
+                        <img src="assets/customer-service.png" alt="Best Haircut 1">
+                        <p>Trendy Layered Cut for Modern Style</p>
+                    </div>
+                    <div class="best-slide">
+                        <img src="assets/hair-colouring.png" alt="Best Haircut 2">
+                        <p>Classic Bob with a Contemporary Twist</p>
+                    </div>
+                    <div class="best-slide">
+                        <img src="assets/interior.png" alt="Best Haircut 3">
+                        <p>Elegant Long Waves for Every Occasion</p>
+                    </div>
+                    <div class="best-slide">
+                        <img src="assets/hair-heating.png" alt="Best Haircut 4">
+                        <p>Sharp Undercut for a Bold Look</p>
+                    </div>
+                    <div class="best-dots" id="best-dots-1">
+                        <div class="best-dot active" data-slide="0"></div>
+                        <div class="best-dot" data-slide="1"></div>
+                        <div class="best-dot" data-slide="2"></div>
+                        <div class="best-dot" data-slide="3"></div>
+                    </div>
                 </div>
-                <div class="best-slide">
-                    <img src="assets/s22.jpg" alt="Best Haircut 2">
-                    <p>Classic Bob with a Contemporary Twist</p>
-                </div>
-                <div class="best-slide">
-                    <img src="assets/s21.jpg" alt="Best Haircut 3">
-                    <p>Elegant Long Waves for Every Occasion</p>
-                </div>
-                <div class="best-slide">
-                    <img src="assets/s2outro.jpg" alt="Best Haircut 4">
-                    <p>Sharp Undercut for a Bold Look</p>
+                <div class="best-carousel" id="best-carousel-2">
+                    <div class="best-slide active">
+                        <img src="assets/hair-dying.png" alt="Best Service 1">
+                        <p>Premium Salon Experience</p>
+                    </div>
+                    <div class="best-slide">
+                        <img src="assets/Bridal.png" alt="Best Service 2">
+                        <p>Expert Stylists at Your Service</p>
+                    </div>
+                    <div class="best-slide">
+                        <img src="assets/Makeup.png" alt="Best Service 3">
+                        <p>Transformative Beauty Solutions</p>
+                    </div>
+                    <div class="best-slide">
+                        <img src="assets/hair-stylist.png" alt="Best Service 4">
+                        <p>Personalized Care & Attention</p>
+                    </div>
+                    <div class="best-dots" id="best-dots-2">
+                        <div class="best-dot active" data-slide="0"></div>
+                        <div class="best-dot" data-slide="1"></div>
+                        <div class="best-dot" data-slide="2"></div>
+                        <div class="best-dot" data-slide="3"></div>
+                    </div>
                 </div>
             </div>
         </div>
