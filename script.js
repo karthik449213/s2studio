@@ -80,6 +80,14 @@
         body.setAttribute('data-theme', savedTheme);
         themeToggle.textContent = savedTheme === 'dark' ? '🌙' : '☀️';
 
+        // Ensure page starts at hero section on load
+        window.addEventListener('load', () => {
+            window.scrollTo(0, 0);
+            // Set active nav link to home
+            navLinks.forEach(link => link.classList.remove('active'));
+            document.querySelector('a[href="#home"]').classList.add('active');
+        });
+
         // Scroll reveal animation
         const observerOptions = {
             threshold: 0.1,
@@ -170,14 +178,35 @@
             }, 3000);
         });
 
-        // Service card hover effects
+        // Enhanced micro-interactions: Service card hover effects with glow and ripple
         document.querySelectorAll('.service-card').forEach(card => {
             card.addEventListener('mouseenter', () => {
-                card.style.transform = 'translateY(-5px) scale(1.02)';
+                card.style.transform = 'translateY(-8px) scale(1.03)';
+                card.style.boxShadow = '0 25px 50px rgba(230, 0, 126, 0.4), 0 0 40px rgba(230, 0, 126, 0.2)';
+                card.style.borderColor = 'var(--accent-color)';
             });
-            
+
             card.addEventListener('mouseleave', () => {
                 card.style.transform = 'translateY(0) scale(1)';
+                card.style.boxShadow = '';
+                card.style.borderColor = 'transparent';
+            });
+
+            // Add ripple effect on click
+            card.addEventListener('click', function(e) {
+                const ripple = document.createElement('div');
+                ripple.style.position = 'absolute';
+                ripple.style.borderRadius = '50%';
+                ripple.style.background = 'rgba(255, 255, 255, 0.6)';
+                ripple.style.transform = 'scale(0)';
+                ripple.style.animation = 'ripple 0.6s linear';
+                ripple.style.left = (e.offsetX - 10) + 'px';
+                ripple.style.top = (e.offsetY - 10) + 'px';
+                ripple.style.width = '20px';
+                ripple.style.height = '20px';
+                this.style.position = 'relative';
+                this.appendChild(ripple);
+                setTimeout(() => ripple.remove(), 600);
             });
         });
 
@@ -279,17 +308,77 @@
             showSlide(current);
         })();
 
-        // Best Results Carousel Auto-Rotate
+        // Best Results Carousels Auto-Rotate
         (function() {
-            const bestSlides = document.querySelectorAll('.best-slide');
-            let bestIndex = 0;
-            function showBestSlide(idx) {
-                bestSlides.forEach((slide, i) => {
+            // First carousel
+            const bestSlides1 = document.querySelectorAll('#best-carousel-1 .best-slide');
+            const bestDots1 = document.querySelectorAll('#best-dots-1 .best-dot');
+            let bestIndex1 = 0;
+
+            function showBestSlide1(idx) {
+                bestSlides1.forEach((slide, i) => {
+                    slide.classList.toggle('active', i === idx);
+                });
+                bestDots1.forEach((dot, i) => {
+                    dot.classList.toggle('active', i === idx);
+                });
+            }
+
+            // Second carousel
+            const bestSlides2 = document.querySelectorAll('#best-carousel-2 .best-slide');
+            const bestDots2 = document.querySelectorAll('#best-dots-2 .best-dot');
+            let bestIndex2 = 0;
+
+            function showBestSlide2(idx) {
+                bestSlides2.forEach((slide, i) => {
+                    slide.classList.toggle('active', i === idx);
+                });
+                bestDots2.forEach((dot, i) => {
+                    dot.classList.toggle('active', i === idx);
+                });
+            }
+
+            // Auto-rotate first carousel
+            setInterval(() => {
+                bestIndex1 = (bestIndex1 + 1) % bestSlides1.length;
+                showBestSlide1(bestIndex1);
+            }, 3500);
+
+            // Auto-rotate second carousel
+            setInterval(() => {
+                bestIndex2 = (bestIndex2 + 1) % bestSlides2.length;
+                showBestSlide2(bestIndex2);
+            }, 3500);
+
+            // Dot navigation for first carousel
+            bestDots1.forEach((dot, index) => {
+                dot.addEventListener('click', () => {
+                    bestIndex1 = index;
+                    showBestSlide1(bestIndex1);
+                });
+            });
+
+            // Dot navigation for second carousel
+            bestDots2.forEach((dot, index) => {
+                dot.addEventListener('click', () => {
+                    bestIndex2 = index;
+                    showBestSlide2(bestIndex2);
+                });
+            });
+        })();
+
+        // Hero Carousel Auto-Slide
+        (function() {
+            const heroSlides = document.querySelectorAll('.hero-slide');
+            let heroIndex = 0;
+            function showHeroSlide(idx) {
+                heroSlides.forEach((slide, i) => {
                     slide.classList.toggle('active', i === idx);
                 });
             }
+            showHeroSlide(heroIndex);
             setInterval(() => {
-                bestIndex = (bestIndex + 1) % bestSlides.length;
-                showBestSlide(bestIndex);
-            }, 3500);
+                heroIndex = (heroIndex + 1) % heroSlides.length;
+                showHeroSlide(heroIndex);
+            }, 1);
         })();
