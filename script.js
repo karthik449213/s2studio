@@ -240,35 +240,9 @@
             serviceObserver.observe(card);
         });
 
-        // Add typing effect to hero tagline
-        const tagline = document.querySelector('.tagline');
-        const text = tagline.textContent;
-        tagline.textContent = '';
-        
-        let i = 0;
-        const typeWriter = () => {
-            if (i < text.length) {
-                tagline.textContent += text.charAt(i);
-                i++;
-                setTimeout(typeWriter, 50);
-            }
-        };
+    
 
-        // Start typing animation after page load
-        window.addEventListener('load', () => {
-            setTimeout(typeWriter, 1000);
-        });
-
-        // Add hover effect to gallery items
-        document.querySelectorAll('.gallery-item').forEach(item => {
-            item.addEventListener('mouseenter', () => {
-                item.style.transform = 'scale(1.05)';
-            });
-            
-            item.addEventListener('mouseleave', () => {
-                item.style.transform = 'scale(1)';
-            });
-        });
+       
 
         // Performance optimization: Lazy load animations
         const animationObserver = new IntersectionObserver((entries) => {
@@ -303,7 +277,7 @@
                 showSlide(current);
             }
             if (slides.length > 1) {
-                setInterval(nextSlide, 3500);
+                setInterval(nextSlide, 4000);
             }
             showSlide(current);
         })();
@@ -380,5 +354,7 @@
             setInterval(() => {
                 heroIndex = (heroIndex + 1) % heroSlides.length;
                 showHeroSlide(heroIndex);
-            }, 1);
+            }, 2000);
         })();
+        const heroslides=document.querySelectorAll('.hero-slide');
+        console.log(heroslides);
